@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="">
+
+        <fieldset id="group1">
+            <div>
+              <div class="d-inline" id="revolut" style="margin-top: 5px;">
+                  <input type="radio" name="group1" class="revolut_input" id="1" value="Yes" style="padding-right: 5px;">
+                  <label class = "Yes" for="radioPrimary1">Yes
+                  </label>
+                </div>
+                <div class="d-inline revolut">
+                  <input type="radio" name="group1" id="2" value="No" class="revolut_input">
+                  <label class = "No" for="radioPrimary2">No
+                  </label>
+                </div>
+          </div>
+          </fieldset>
+    </form>
+
+    <script> 
+    const revolut = document.querySelectorAll(".revolut_input");
+//const amazon = document.querySelectorAll(".amazon_input");
+const button = document.querySelector("button");
+
+const radio = {revolut: false, amazon: false};
+function handleButtonChange(e) {
+    e.preventDefault();
+   
+    if(e.target.value === "Yes") {
+       console.log("Node")
+   }
+} 
+
+for(let i=0; i < revolut.length; i++) {
+    //revolut[i].addEventListener("click", handleButtonChange);
+   // amazon[i].addEventListener("click", handleButtonChange);
+}
+//revolut.forEach(node => node.addEventListener("click", handleButtonChange))
+//amazon.forEach(node => node.addEventListener("click", handleButtonChange));
+
+
+
+
+    </script>
+ </body>
+ </html>
